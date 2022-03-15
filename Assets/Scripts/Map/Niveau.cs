@@ -185,7 +185,7 @@ public class Niveau : MonoBehaviour
 
 
     
-    
+
     private void SpawnPortail()
     {
         foreach (Room room in spawnedRoom)
@@ -195,14 +195,14 @@ public class Niveau : MonoBehaviour
                 CasePortail.TypePortail type = CasePortail.TypePortail.South;
                 Grille grilleActuel = room.transform.GetComponent<Grille>();
                 Vector2Int pos = new Vector2Int(7, grilleActuel.RowCount-1);
-                grilleActuel.replaceTile(tilePortail, pos,type);
+                grilleActuel.replaceTile(tilePortail, pos);
             }
             if (room.southRoom == true)
             {
                 CasePortail.TypePortail type = CasePortail.TypePortail.North;
                 Grille grilleActuel = room.transform.GetComponent<Grille>();
                 Vector2Int pos = new Vector2Int(7, 0);
-                grilleActuel.replaceTile(tilePortail, pos, type);
+                grilleActuel.replaceTile(tilePortail, pos);
 
             }
             if (room.westRoom == true)
@@ -210,7 +210,7 @@ public class Niveau : MonoBehaviour
                 CasePortail.TypePortail type = CasePortail.TypePortail.East;
                 Grille grilleActuel = room.transform.GetComponent<Grille>();
                 Vector2Int pos = new Vector2Int(0,7);
-                grilleActuel.replaceTile(tilePortail, pos, type);
+                grilleActuel.replaceTile(tilePortail, pos);
 
             }
             if (room.eastRoom == true)
@@ -218,7 +218,7 @@ public class Niveau : MonoBehaviour
                 CasePortail.TypePortail type = CasePortail.TypePortail.West;
                 Grille grilleActuel = room.transform.GetComponent<Grille>();
                 Vector2Int pos = new Vector2Int(grilleActuel.RowCount - 1, 7);
-                grilleActuel.replaceTile(tilePortail, pos, type);
+                grilleActuel.replaceTile(tilePortail, pos);
 
             }
 

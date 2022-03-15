@@ -8,7 +8,10 @@ public class EnnemisVie : MonoBehaviour
 
     [SerializeField] int EnnemieHealth = 100;
 
-
+    [SerializeField]
+    bool estBoss = false;
+    [SerializeField]
+    GameObject finNiveau;
     public void Awake()
     {
         ennemis = transform.GetComponent<Ennemis>();
@@ -27,6 +30,9 @@ public class EnnemisVie : MonoBehaviour
         if(EnnemieHealth <= 0)
         {
             // GameManager.Instance.currentRoom.currentRoomEnnemie.Remove(transform.GetComponent<Ennemis>());
+            if(estBoss){
+                Instantiate(finNiveau,transform.position,new Quaternion(0,0,0,0));
+            }
             DropObjet();
             Destroy(ennemis.gameObject);
         }

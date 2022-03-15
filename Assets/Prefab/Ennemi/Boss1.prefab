@@ -189,6 +189,8 @@ MonoBehaviour:
   - {fileID: 1503241398592186849, guid: 246bcbad3b0796140a2424d651e80c92, type: 3}
   - {fileID: 6582019201388637115, guid: 0fbf5b98a3f990040b08bae9cb4ac00b, type: 3}
   EnnemieHealth: 1000
+  estBoss: 1
+  finNiveau: {fileID: 3187072386452271910, guid: d75305b4a8360034c9e4b09e92807d40, type: 3}
 --- !u!114 &8460480057839943300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +211,7 @@ MonoBehaviour:
   dammage: 30
   seeker: {fileID: 0}
   rb: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!95 &8460480057839943301
 Animator:
   serializedVersion: 3

@@ -13,6 +13,36 @@ public class Inventaire : MonoBehaviour
     {
         Instance = this;
     }
+
+    private void Update() {
+        for ( int i = 0; i < 10; ++i )
+        {
+            if ( Input.GetKeyDown( "" + i ) )
+            {
+                changerObjet(i);
+            }
+        }
+    }
+
+    private void changerObjet(int i){
+        i += 1;
+        if(i < emplacementList.Length){
+            int x = 0;
+            
+            foreach (Emplacement emplacement in emplacementList)
+            {
+                if(i == x){
+                    emplacement.isSelected = true;
+                }else{
+                    if(emplacement.typeEmplacement.ToString() == "Objet"){
+                        emplacement.isSelected = false;
+                    }
+                }
+                emplacement.Selected();
+                x++;
+            }
+        }
+    }
     public void Recuperer(Item item)
     {
         for (int i = 0; i < emplacementList.Length; i++)

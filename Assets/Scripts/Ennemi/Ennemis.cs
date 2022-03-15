@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ennemis : MonoBehaviour
 {
     public Transform target;
-
+    public float targetDistanceToAgro = 5f;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
 
@@ -45,10 +45,13 @@ public class Ennemis : MonoBehaviour
 
     private void Update()
     {
-        Vector2 lookDir = target.position - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
-        rb.rotation = angle;
-        SeDeplacer();
+        float distance = Vector3.Distance (transform.position, target.transform.position);
+        if(distance<= targetDistanceToAgro){
+            Vector2 lookDir = target.position - transform.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
+            rb.rotation = angle;
+            SeDeplacer();
+        }
     }
 
     public virtual void SeDeplacer()

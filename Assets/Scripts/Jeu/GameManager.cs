@@ -143,14 +143,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentRoom.isClear == true)
-        {
-            if(doOnce == false)
-            {
-                ActiverPortaille();
-                doOnce = true;
-            }
-        }
+        // if(currentRoom.isClear == true)
+        // {
+        //     if(doOnce == false)
+        //     {
+        //         // ActiverPortaille();
+        //         doOnce = true;
+        //     }
+        // }
     }
 
     internal void SetupGame(List<Room> spawnedRoom)

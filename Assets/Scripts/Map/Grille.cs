@@ -118,7 +118,7 @@ public class Grille : MonoBehaviour
         t_NewTileGo.transform.localScale = new Vector3(t_Scale, t_Scale, t_Scale);
         t_NewTileGo.GetComponent<Case>().GridPos = position;
         t_NewTileGo.transform.parent = this.transform;
-        portails.Add(t_NewTileGo.GetComponent<CasePortail>());
+        // portails.Add(t_NewTileGo.GetComponent<CasePortail>());
     }
 
     public Vector3 GridToWorld(Vector2Int a_GridPos)

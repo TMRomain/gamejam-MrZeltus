@@ -61,7 +61,7 @@ public class Room : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentRoomEnnemie.Count);
+        // Debug.Log(currentRoomEnnemie.Count);
         if (currentRoomEnnemie.Count == 0)
         {
             isClear = true;

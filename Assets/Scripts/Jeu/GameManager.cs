@@ -161,10 +161,10 @@ public class GameManager : MonoBehaviour
             room.victoire = computer;
         }
         GetFirstRoom();
-        DeactivateAllRoom(firstRoom);
-        MoveRoom(firstRoom);
-        currentRoom = firstRoom;
-        ActivatePortal();
+        // DeactivateAllRoom(firstRoom);
+        // MoveRoom(firstRoom);
+        // currentRoom = firstRoom;
+        // ActivatePortal();
         SpawnPlayer();
     }
 
